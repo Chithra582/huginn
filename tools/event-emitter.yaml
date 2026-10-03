@@ -1,0 +1,14 @@
+name: "event-emitter"
+description: "Emits structured JSON events and propagates them to connected downstream agents."
+input_schema:
+  type: "object"
+  properties:
+    agent_id:
+      type: "string"
+      description: "Identifier of the emitting agent."
+    payload:
+      type: "object"
+      description: "Arbitrary JSON payload containing event data."
+  required:
+    - "agent_id"
+    - "payload"

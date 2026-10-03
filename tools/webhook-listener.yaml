@@ -1,0 +1,14 @@
+name: "webhook-listener"
+description: "Ingests external HTTP requests, validates signatures, and transforms them into internal events."
+input_schema:
+  type: "object"
+  properties:
+    endpoint_path:
+      type: "string"
+      description: "Inbound webhook URL path."
+    payload:
+      type: "object"
+      description: "Received HTTP body and headers."
+  required:
+    - "endpoint_path"
+    - "payload"

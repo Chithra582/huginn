@@ -1,0 +1,14 @@
+name: "agent-scheduler"
+description: "Manages cron schedules, polling intervals, and event throttling for background agents."
+input_schema:
+  type: "object"
+  properties:
+    agent_id:
+      type: "string"
+      description: "Target agent identifier."
+    schedule:
+      type: "string"
+      description: "Cron expression or interval identifier (e.g. 5m, 1h, midnight)."
+  required:
+    - "agent_id"
+    - "schedule"

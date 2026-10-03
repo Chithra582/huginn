@@ -1,0 +1,19 @@
+name: "scenario-runner"
+description: "Executes, imports, and exports multi-agent automation scenarios."
+input_schema:
+  type: "object"
+  properties:
+    scenario_id:
+      type: "string"
+      description: "Unique scenario identifier."
+    action:
+      type: "string"
+      enum:
+        - "run"
+        - "export"
+        - "enable"
+        - "disable"
+      description: "Action to perform on scenario."
+  required:
+    - "scenario_id"
+    - "action"
